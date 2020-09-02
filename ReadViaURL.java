@@ -27,11 +27,11 @@ public class ReadViaURL
 {
   public static String[] readWords (String urlAddress)
   {
+    ArrayList<String> wordList = new ArrayList<> ();
     try
     {
       URL url = new URL (urlAddress);
 
-      ArrayList<String> wordList = new ArrayList<> ();
       try (Scanner input = new Scanner (url.openStream ()))
       {
         while (input.hasNext ())
@@ -43,12 +43,12 @@ public class ReadViaURL
         System.out.println ("got exception: " + e);
         System.exit (1);
       }
-      return wordList.toArray (new String [0]);
     }
     catch (Exception e)
     {
       System.out.println ("got exception: " + e);
       System.exit (1);
     }
+    return wordList.toArray (new String [0]);
   }
 }
