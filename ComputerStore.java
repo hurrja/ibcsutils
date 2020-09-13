@@ -28,10 +28,16 @@ public class ComputerStore
 
 class Order
 {
+  public void addLaptop (String model) {}
+  public void addRouter (String model) {}
+  public Laptop[] laptops;
+  public Router[] routers;
 }
 
 class Warehouse
 {
+  public Laptop[] laptops;
+  public Router[] routers;
 }
 
 class Laptop
