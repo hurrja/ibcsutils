@@ -1,0 +1,17 @@
+<project name="name-registry" default="jar" basedir=".">
+  <target name="compile">
+    <mkdir dir="build/"/>
+    <javac srcdir="." destdir="build"/>
+  </target>
+  <target name="jar" depends="compile">
+    <mkdir dir="build/"/>
+    <jar destfile="build/NameRegistryApp.jar" basedir="build/classes">
+      <manifest>
+        <attribute name="Main-Class" value="NameRegistryApp"/>
+      </manifest>
+    </jar>
+  </target>
+  <target name="run" depends="jar">
+    <java jar="build/NameRegistryApp.jar" fork="true"/>
+  </target>
+</project>
