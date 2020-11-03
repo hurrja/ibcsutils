@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class NameReader
+public class NameRegistryApp
 {
   public static void main (String[] args)
   {
