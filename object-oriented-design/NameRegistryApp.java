@@ -91,7 +91,15 @@ class NameRegister
     // code to be written here
   }
 
-  String[] getNames ()
+  // return the number of names in registry
+  int getNumNames ()
+  {
+    // code to be written here
+    return 0;
+  }
+  
+  // return numNames first names from registry as an array
+  String[] getNames (int numNames)
   {
     // code to be written here
     return null;
