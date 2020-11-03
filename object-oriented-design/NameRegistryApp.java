@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// application class
 public class NameRegistryApp
 {
   public static void main (String[] args)
@@ -20,6 +21,7 @@ public class NameRegistryApp
   }
 }
 
+// data source for reading names
 class DataSource implements AutoCloseable
 {
   DataSource ()
@@ -27,6 +29,8 @@ class DataSource implements AutoCloseable
     scanner = new Scanner (System.in);
   }
 
+  // returns next line (name), return value is empty string if no more
+  // names are available
   String readName ()
   {
     if (scanner.hasNextLine ())
@@ -53,15 +57,18 @@ class UserInterface
 
   void run ()
   {
+    // application logic
     readNames ();
     printNames ();
   }
 
+  // reads names from data source
   void readNames ()
   {
     // code to be written here
   }
 
+  // prints names, each name on a separate line
   void printNames ()
   {
     // code to be written here
@@ -78,14 +85,15 @@ class NameRegister
     // code to be written here
   }
 
+  // adds a new name to register
   void addName (String name)
   {
     // code to be written here
   }
 
-  String listNames ()
+  String[] getNames ()
   {
     // code to be written here
-    return "";
+    return null;
   }
 }
