@@ -4,16 +4,13 @@ public class NameRegistryApp
 {
   public static void main (String[] args)
   {
-    final int MAX_NAMES = 500;
-    NameRegister nameRegister = new NameRegister (MAX_NAMES);
+    final int MAX_NUM_NAMES = 500;
+    NameRegister nameRegister = new NameRegister (MAX_NUM_NAMES);
     
     try (DataSource dataSource = new DataSource ())
     {
       UserInterface ui = new UserInterface (dataSource, nameRegister);
-      if (ui == null)
-        System.out.println ("What?");
-      else
-        ui.run ();
+      ui.run ();
     }
     catch (Exception e)
     {
@@ -30,7 +27,7 @@ class DataSource implements AutoCloseable
     scanner = new Scanner (System.in);
   }
 
-  String readInput ()
+  String readName ()
   {
     if (scanner.hasNextLine ())
       return scanner.nextLine ();
@@ -56,6 +53,17 @@ class UserInterface
 
   void run ()
   {
+    readNames ();
+    printNames ();
+  }
+
+  void readNames ()
+  {
+    // code to be written here
+  }
+
+  void printNames ()
+  {
     // code to be written here
   }
 
@@ -72,10 +80,12 @@ class NameRegister
 
   void addName (String name)
   {
+    // code to be written here
   }
 
   String listNames ()
   {
+    // code to be written here
     return "";
   }
 }
