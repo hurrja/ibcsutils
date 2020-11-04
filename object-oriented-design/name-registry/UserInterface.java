@@ -15,5 +15,6 @@ public class UserInterface
   public void showNames (String[] names)
   {
     // code to be written here
+    System.out.println ("test");
   }
 }
