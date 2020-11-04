@@ -17,9 +17,9 @@ public class NameRegistryApp
     }
   }
 
+  // application logic
   public static void run (NameRegister nameRegister, UserInterface ui, DataSource dataSource)
   {
-    // application logic
     String[] names = ui.readNames (dataSource); // read names from user
     nameRegister.setNames (names); // store names into register
     ui.showNames (nameRegister.getNames ()); // show names in registers to user
