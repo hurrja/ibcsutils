@@ -6,15 +6,15 @@ public class NameRegister
   }
 
   // adds a new name to register
-  public void addName (String name)
+  public void setNames (String[] names)
   {
     // code to be written here
   }
 
   // return an array of current names in register
-  public String[] getCurrentNames ()
+  public String[] getNames ()
   {
     // code to be written here
-    return null;
+    return new String [0];
   }
 }

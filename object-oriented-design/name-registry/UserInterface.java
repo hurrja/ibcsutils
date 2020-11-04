@@ -1,30 +1,19 @@
 public class UserInterface
 {
-  public UserInterface (DataSource dataSource, NameRegister nameRegister)
+  public UserInterface ()
   {
-    this.dataSource = dataSource;
-    this.nameRegister = nameRegister;
-  }
-
-  public void run ()
-  {
-    // application logic
-    readNames ();
-    printNames ();
   }
 
   // reads names from data source
-  private void readNames ()
+  public String[] readNames (DataSource dataSource)
   {
     // code to be written here
+    return new String [0];
   }
 
   // prints names, each name on a separate line
-  private void printNames ()
+  public void showNames (String[] names)
   {
     // code to be written here
   }
-
-  private DataSource dataSource;
-  private NameRegister nameRegister;
 }

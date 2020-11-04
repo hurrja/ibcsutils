@@ -4,11 +4,11 @@ public class NameRegistryApp
   public static void main (String[] args)
   {
     NameRegister nameRegister = new NameRegister ();
+    UserInterface ui = new UserInterface ();
     
     try (DataSource dataSource = new DataSource ())
     {
-      UserInterface ui = new UserInterface (dataSource, nameRegister);
-      ui.run ();
+      run (nameRegister, ui, dataSource);
     }
     catch (Exception e)
     {
@@ -16,5 +16,12 @@ public class NameRegistryApp
       System.exit (1);
     }
   }
-}
 
+  public static void run (NameRegister nameRegister, UserInterface ui, DataSource dataSource)
+  {
+    // application logic
+    String[] names = ui.readNames (dataSource); // read names from user
+    nameRegister.setNames (names); // store names into register
+    ui.showNames (nameRegister.getNames ()); // show names in registers to user
+  }
+}
