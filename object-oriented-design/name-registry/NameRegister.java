@@ -1,6 +1,6 @@
 public class NameRegister
 {
-  public NameRegister (int maxNames)
+  public NameRegister ()
   {
     // code to be written here
   }
@@ -11,15 +11,8 @@ public class NameRegister
     // code to be written here
   }
 
-  // return the number of names in registry
-  public int getNumNames ()
-  {
-    // code to be written here
-    return 0;
-  }
-  
-  // return numNames first names from registry as an array
-  public String[] getNames (int numNames)
+  // return an array of current names in register
+  public String[] getCurrentNames ()
   {
     // code to be written here
     return null;

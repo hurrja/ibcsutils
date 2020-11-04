@@ -3,8 +3,7 @@ public class NameRegistryApp
 {
   public static void main (String[] args)
   {
-    final int MAX_NUM_NAMES = 500;
-    NameRegister nameRegister = new NameRegister (MAX_NUM_NAMES);
+    NameRegister nameRegister = new NameRegister ();
     
     try (DataSource dataSource = new DataSource ())
     {
