@@ -1,4 +1,36 @@
-* Utility classes for IB computer science program
+* Miscallaneous utility classes for IB computer science
+** Installation
+*** If you are using Intellij IDEA
+    In Intellij IDEA, this package needs to be installed only once,
+    and then you can use it in all your projects.
+
+    Installation steps are as follows:
+    1. Create a new project from version control.
+    2. As project source, give
+       #+begin_example
+       https://github.com/jarmohurri/ibcsutils.git
+       #+end_example
+    3. Install git if asked to do that.
+    4. After git has cloned the project, build the package jar file:
+       1. Right click on file =build.xml=.
+       2. Select =Add as Ant build file=.
+       3. Select =Build -> ibcsutils -> <default target>=.
+    5. After the build has finished, you can close the =ibadts=
+       project. The package is ready to be used.
+
+    After this, to use this package in a project:
+    1. Select =File -> Project structure...=.
+    2. Select =Modules=.
+    3. Select =Dependencies=.
+    4. Select =+ -> JARs or directories...=.
+    5. This opens a file selector. Locate =ibcsutils.jar= and select it.
+    6. Select =OK=.
+*** If you are using git as your own version control system
+    Just add this library as a submodule of your project:
+    #+begin_src sh
+      git submodule add https://github.com/jarmohurri/ibcsutils.git
+    #+end_src
+
 ** License
    Copyright (C) 2020 Jarmo Hurri
 
