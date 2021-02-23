@@ -1,4 +1,4 @@
-* Miscallaneous utility classes for IB computer science
+* Miscellaneous utility classes for IB computer science
 ** Installation
 *** If you are using Intellij IDEA
     In Intellij IDEA, this package needs to be installed only once,
@@ -32,7 +32,7 @@
     #+end_src
 
 ** License
-   Copyright (C) 2020 Jarmo Hurri
+   Copyright (C) 2020-2021 Jarmo Hurri
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by

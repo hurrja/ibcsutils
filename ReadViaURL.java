@@ -1,4 +1,4 @@
-// Copyright (C) 2020 Jarmo Hurri
+// Copyright (C) 2020-2021 Jarmo Hurri
 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -25,7 +25,9 @@ import java.util.ArrayList;
 
 public class ReadViaURL
 {
-  public static String[] readWords (String urlAddress, boolean removePunctuation)
+  public static String[] readWords (String urlAddress,
+                                    boolean removePunctuation,
+                                    boolean toLowercase)
   {
     ArrayList<String> wordList = new ArrayList<> ();
     try
@@ -40,7 +42,11 @@ public class ReadViaURL
           if (removePunctuation)
             word = word.replaceAll ("\\p{Punct}", "");
           if (word.length () > 0)
+          {
+            if (toLowercase)
+              word = word.toLowerCase ();
             wordList.add (word);
+          }
         }
       }
       catch (Exception e)
