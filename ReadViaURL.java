@@ -15,7 +15,7 @@
 
 // ---------------------------------------------------------------------
 // Static function for reading text (words) from the web via a given
-// url.
+// url. Removes punctuation if requested.
 
 package ibcsutils;
 
@@ -25,7 +25,7 @@ import java.util.ArrayList;
 
 public class ReadViaURL
 {
-  public static String[] readWords (String urlAddress)
+  public static String[] readWords (String urlAddress, boolean removePunctuation)
   {
     ArrayList<String> wordList = new ArrayList<> ();
     try
@@ -35,8 +35,13 @@ public class ReadViaURL
       try (Scanner input = new Scanner (url.openStream ()))
       {
         while (input.hasNext ())
-          wordList.add (input.next ());
-               
+        {
+          String word = input.next ();
+          if (removePunctuation)
+            word = word.replaceAll ("\\p{Punct}", "");
+          if (word.length () > 0)
+            wordList.add (word);
+        }
       }
       catch (Exception e)
       {
