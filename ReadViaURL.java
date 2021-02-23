@@ -27,7 +27,8 @@ public class ReadViaURL
 {
   public static String[] readWords (String urlAddress,
                                     boolean removePunctuation,
-                                    boolean toLowercase)
+                                    boolean toLowercase,
+                                    boolean removeDigits)
   {
     ArrayList<String> wordList = new ArrayList<> ();
     try
@@ -43,9 +44,15 @@ public class ReadViaURL
             word = word.replaceAll ("\\p{Punct}", "");
           if (word.length () > 0)
           {
-            if (toLowercase)
-              word = word.toLowerCase ();
-            wordList.add (word);
+            if (removeDigits)
+              word = word.replaceAll ("\\d", "");
+            
+            if (word.length () > 0)
+            {
+              if (toLowercase)
+                word = word.toLowerCase ();
+              wordList.add (word);
+            }
           }
         }
       }
